@@ -1,37 +1,43 @@
 {
   "version": 2,
-  "labels": {
-    "defaults": [ ":watch: Not Triaged" ],
-    "product": {
-      "(?i).*": "Source - Docs.ms",
-      "(?i)dotnet-csharp$": ":books: Area - C# Guide",
-      "(?i)dotnet-visualbasic$": ":books: Area - Visual Basic Guide",
-      "(?i)dotnet-core$": ":books: Area - .NET Core Guide",
-      "(?i)dotnet-framework$": ":books: Area - .NET Framework Guide",
-      "(?i)dotnet-fsharp$": ":books: Area - F# Guide",
-      "(?i)dotnet-ml$": ":books: Area - ML.NET Guide",
-      "(?i)dotnet$": ":books: Area - .NET Guide",
-      "(?i)dotnet-api$": ":books: Area - API Reference,:file_folder: Repo - dotnet-api-docs"
-    },
-    "contentsource": {
-      "(?i).*master\/docs\/framework\/wpf.*": ":card_file_box: Technology - WPF",
-      "(?i).*master\/docs\/framework\/wcf.*": ":card_file_box: Technology - WCF",
-      "(?i).*master\/docs\/framework\/winforms.*": ":card_file_box: Technology - WinForms",
-      "(?i).*dotnet-api-docs\/blob\/master\/xml\/system\\.windows\\.forms.*": ":card_file_box: Technology - WinForms",
-      "(?i).*dotnet-api-docs\/blob\/master\/xml\/system\\.security.*": ":card_file_box: Technology - Security"
-    }
-  },
-  "comments": {
-    "product": {
-      "content": {
-        "(?i).*master\/docs\/framework\/wpf.*": ":card_file_box: Technology - WPF"
-      }
-    }
-  },
-  "custom_issue_processor": {
-    "labels": {
-      "issuetype": {
-        "(?i)breaking-change$": "breaking-change"
+  "issue": {
+    "action": {
+      "opened": {
+        "processor-custom-meta": {
+          "labels-add": {
+            "issuetype": {
+              "(?i)breaking-change$": "breaking-change"
+            }
+          }
+        },
+        "processor-docs": {
+          "labels-add": {
+            "defaults": [ ":watch: Not Triaged" ],
+            "product": {
+              "(?i).*": "Source - Docs.ms",
+              "(?i)dotnet-csharp$": ":books: Area - C# Guide",
+              "(?i)dotnet-visualbasic$": ":books: Area - Visual Basic Guide",
+              "(?i)dotnet-core$": ":books: Area - .NET Core Guide",
+              "(?i)dotnet-framework$": ":books: Area - .NET Framework Guide",
+              "(?i)dotnet-fsharp$": ":books: Area - F# Guide",
+              "(?i)dotnet-ml$": ":books: Area - ML.NET Guide",
+              "(?i)dotnet$": ":books: Area - .NET Guide",
+              "(?i)dotnet-api$": ":books: Area - API Reference,:file_folder: Repo - dotnet-api-docs"
+            },
+            "contentsource": {
+              "(?i).*master\/docs\/framework\/wpf.*": ":card_file_box: Technology - WPF",
+              "(?i).*master\/docs\/framework\/wcf.*": ":card_file_box: Technology - WCF",
+              "(?i).*master\/docs\/framework\/winforms.*": ":card_file_box: Technology - WinForms",
+              "(?i).*dotnet-api-docs\/blob\/master\/xml\/system\\.windows\\.forms.*": ":card_file_box: Technology - WinForms",
+              "(?i).*dotnet-api-docs\/blob\/master\/xml\/system\\.security.*": ":card_file_box: Technology - Security"
+            }
+          }
+        }
+      },
+      "closed": {
+        "default": {
+          "labels-remove": "in-progress"
+        }
       }
     }
   }
