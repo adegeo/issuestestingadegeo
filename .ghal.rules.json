@@ -12,7 +12,7 @@
         },
         "processor-docs": {
           "labels-add": {
-            "defaults": [ ":watch: Not Triaged" ],
+            "defaults": [ ":watch: Not Triageda" ],
             "product": {
               "(?i).*": "Source - Docs.ms",
               "(?i)dotnet-csharp$": ":books: Area - C# Guide",
