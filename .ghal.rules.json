@@ -36,7 +36,7 @@
       },
       "closed": {
         "default": {
-          "labels-remove": "in-progress"
+          "labels-remove": [ "in-progress" ]
         }
       }
     }
