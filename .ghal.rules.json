@@ -58,5 +58,39 @@
         }
       }
     }
+  },
+  "pullrequest": {
+    "action": {
+      "reopened": {
+        "processor-files": {
+          "labels-add": {
+            "defaults": [ ":watch: Not Triaged" ],
+            "path": {
+              "(?i).*docs\/core\/tools.*": ":card_file_box: Technology - CLI",
+              "(?i).*docs\/core\/docker.*": ":card_file_box: Technology - Docker",
+              "(?i).*docs\/framework\/configure-apps\/file-schema\/network.*": ":card_file_box: Technology - NCL",
+              "(?i).*docs\/framework\/configure-apps\/file-schema\/wcf.*": ":card_file_box: Technology - WCF",
+              "(?i).*docs\/framework\/data\/adonet.*": ":card_file_box: Technology - Data Access",
+              "(?i).*docs\/framework\/data\/wcf.*": ":card_file_box: Technology - WCF",
+              "(?i).*docs\/framework\/docker.*": ":card_file_box: Technology - Docker",
+              "(?i).*docs\/framework\/install.*": ":card_file_box: Technology - Installers",
+              "(?i).*docs\/framework\/migration-guide.*": ":card_file_box: Technology - AppCompat",
+              "(?i).*docs\/framework\/network-programming.*": ":card_file_box: Technology - NCL",
+              "(?i).*docs\/framework\/windows-workflow-foundation.*": ":card_file_box: Technology - WF",
+              "(?i).*docs\/framework\/wpf.*": ":card_file_box: Technology - WPF",
+              "(?i).*docs\/framework\/wcf.*": ":card_file_box: Technology - WCF",
+              "(?i).*docs\/framework\/winforms.*": ":card_file_box: Technology - WinForms",
+              "(?i).*docs\/standard\/containerized-lifecycle-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Docker lifecycle",
+              "(?i).*docs\/standard\/microservices-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - .NET Microservices",
+              "(?i).*docs\/standard\/modern-web-apps-azure-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - ASP.NET Core web apps",
+              "(?i).*docs\/standard\/modernize-with-azure-and-containers.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Modernizing w/ Windows containers",
+              "(?i).*docs\/standard\/security.*": ":card_file_box: Technology - Security",
+              "(?i).*docs\/standard\/serverless-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Serverless apps",
+              "(?i).*docs\/standard\/standard\/design-guidelines\/.*": ":book: guide - Framework Design Guidelines"
+            }
+          }
+        }
+      }
+    }
   }
 }
