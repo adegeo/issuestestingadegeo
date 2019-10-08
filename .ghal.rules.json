@@ -1,8 +1,12 @@
 {
   "version": 2,
+  "configRevision": 1,
   "issue": {
     "action": {
       "opened": {
+        "default": {
+          "labels-add": [ ":watch: Not Triaged" ]
+        },
         "processor-custom-meta": {
           "labels-add": {
             "issuetype": {
@@ -12,21 +16,33 @@
         },
         "processor-docs": {
           "labels-add": {
-            "defaults": [ ":watch: Not Triaged" ],
             "product": {
               "(?i).*": "Source - Docs.ms",
               "(?i)dotnet-csharp$": ":books: Area - C# Guide",
               "(?i)dotnet-visualbasic$": ":books: Area - Visual Basic Guide",
               "(?i)dotnet-core$": ":books: Area - .NET Core Guide",
+              "(?i)dotnet-desktop$": ":books: Area - Desktop Guide",
               "(?i)dotnet-framework$": ":books: Area - .NET Framework Guide",
               "(?i)dotnet-fsharp$": ":books: Area - F# Guide",
               "(?i)dotnet-ml$": ":books: Area - ML.NET Guide",
               "(?i)dotnet-spark": ":books: Area - .NET for Apache Spark Guide",
               "(?i)dotnet$": ":books: Area - .NET Guide",
               "(?i)dotnet-ml-api$": ":books: Area - API Reference,:file_folder: Repo - ml-api-docs",
-              "(?i)dotnet-roslyn-api$": ":books: Area - Roslyn API Reference,:file_folder: Repo - roslyn-api-docs"
+              "(?i)dotnet-roslyn-api$": ":books: Area - Roslyn API Reference,:file_folder: Repo - roslyn-api-docs",
+              "(?i)dotnet-architecture$": ":books: Area - .NET Architecture Guide"
+            },
+            "technology": {
+              "(?i)dotnet-wpf$": ":card_file_box: Technology - WPF"
             },
             "contentsource": {
+              "(?i).*master\/docs\/architecture\/blazor-for-web-forms-developers.*": ":book: guide - Blazor",
+              "(?i).*master\/docs\/architecture\/cloud-native.*": ":book: guide - Cloud Native",
+              "(?i).*master\/docs\/architecture\/containerized-lifecycle.*": ":book: guide - Docker lifecycle",
+              "(?i).*master\/docs\/architecture\/grpc-for-wcf-developers.*": ":book: guide - gRPC",
+              "(?i).*master\/docs\/architecture\/microservices.*": ":book: guide - .NET Microservices",
+              "(?i).*master\/docs\/architecture\/modern-web-apps-azure.*": ":book: guide - ASP.NET Core web apps",
+              "(?i).*master\/docs\/architecture\/modernize-with-azure-containers.*": ":book: guide - Modernizing w/ Windows containers",
+              "(?i).*master\/docs\/architecture\/serverless.*": ":book: guide - Serverless apps",
               "(?i).*master\/docs\/core\/tools.*": ":card_file_box: Technology - CLI",
               "(?i).*master\/docs\/core\/docker.*": ":card_file_box: Technology - Docker",
               "(?i).*master\/docs\/framework\/configure-apps\/file-schema\/network.*": ":card_file_box: Technology - NCL",
@@ -41,12 +57,7 @@
               "(?i).*master\/docs\/framework\/wpf.*": ":card_file_box: Technology - WPF",
               "(?i).*master\/docs\/framework\/wcf.*": ":card_file_box: Technology - WCF",
               "(?i).*master\/docs\/framework\/winforms.*": ":card_file_box: Technology - WinForms",
-              "(?i).*master\/docs\/standard\/containerized-lifecycle-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Docker lifecycle",
-              "(?i).*master\/docs\/standard\/microservices-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - .NET Microservices",
-              "(?i).*master\/docs\/standard\/modern-web-apps-azure-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - ASP.NET Core web apps",
-              "(?i).*master\/docs\/standard\/modernize-with-azure-and-containers.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Modernizing w/ Windows containers",
               "(?i).*master\/docs\/standard\/security.*": ":card_file_box: Technology - Security",
-              "(?i).*master\/docs\/standard\/serverless-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Serverless apps",
               "(?i).*master\/docs\/standard\/standard\/design-guidelines\/.*": ":book: guide - Framework Design Guidelines"
             }
           }
@@ -61,13 +72,25 @@
   },
   "pullrequest": {
     "action": {
-      "reopened": {
+      "opened": {
         "processor-files": {
           "labels-add": {
-            "defaults": [ ":watch: Not Triaged" ],
             "path": {
+              "(?i).*docs\/architecture.*": ":books: Area - .NET Architecture Guide",
+              "(?i).*docs\/architecture\/blazor-for-web-forms-developers.*": ":book: guide - Blazor",
+              "(?i).*docs\/architecture\/cloud-native.*": ":book: guide - Cloud Native",
+              "(?i).*docs\/architecture\/containerized-lifecycle.*": ":book: guide - Docker lifecycle",
+              "(?i).*docs\/architecture\/grpc-for-wcf-developers.*": ":book: guide - gRPC",
+              "(?i).*docs\/architecture\/microservices.*": ":book: guide - .NET Microservices",
+              "(?i).*docs\/architecture\/modern-web-apps-azure.*": ":book: guide - ASP.NET Core web apps",
+              "(?i).*docs\/architecture\/modernize-with-azure-containers.*": ":book: guide - Modernizing w/ Windows containers",
+              "(?i).*docs\/architecture\/serverless.*": ":book: guide - Serverless apps",
+              "(?i).*docs\/core.*": ":books: Area - .NET Core Guide",
               "(?i).*docs\/core\/tools.*": ":card_file_box: Technology - CLI",
               "(?i).*docs\/core\/docker.*": ":card_file_box: Technology - Docker",
+              "(?i).*docs\/csharp.*": ":books: Area - C# Guide",
+              "(?i).*docs\/desktop-wpf*": ":books: Area - Desktop Guide,:card_file_box: Technology - WPF",
+              "(?i).*docs\/framework.*": ":books: Area - .NET Framework Guide",
               "(?i).*docs\/framework\/configure-apps\/file-schema\/network.*": ":card_file_box: Technology - NCL",
               "(?i).*docs\/framework\/configure-apps\/file-schema\/wcf.*": ":card_file_box: Technology - WCF",
               "(?i).*docs\/framework\/data\/adonet.*": ":card_file_box: Technology - Data Access",
@@ -80,13 +103,20 @@
               "(?i).*docs\/framework\/wpf.*": ":card_file_box: Technology - WPF",
               "(?i).*docs\/framework\/wcf.*": ":card_file_box: Technology - WCF",
               "(?i).*docs\/framework\/winforms.*": ":card_file_box: Technology - WinForms",
-              "(?i).*docs\/standard\/containerized-lifecycle-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Docker lifecycle",
-              "(?i).*docs\/standard\/microservices-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - .NET Microservices",
-              "(?i).*docs\/standard\/modern-web-apps-azure-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - ASP.NET Core web apps",
-              "(?i).*docs\/standard\/modernize-with-azure-and-containers.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Modernizing w/ Windows containers",
+              "(?i).*docs\/fsharp.*": ":books: Area - F# Guide",
+              "(?i).*docs\/machine-learning.*": ":books: Area - ML.NET Guide",
+              "(?i).*docs\/spark.*": ":books: Area - .NET for Apache Spark Guide",
+              "(?i).*docs\/standard.*": ":books: Area - .NET Guide",
               "(?i).*docs\/standard\/security.*": ":card_file_box: Technology - Security",
-              "(?i).*docs\/standard\/serverless-architecture.*": ":card_file_box: Technology - .NET Architecture,:book: guide - Serverless apps",
-              "(?i).*docs\/standard\/standard\/design-guidelines\/.*": ":book: guide - Framework Design Guidelines"
+              "(?i).*docs\/standard\/standard\/design-guidelines\/.*": ":book: guide - Framework Design Guidelines",
+              "(?i).*docs\/visual-basic.*": ":books: Area - Visual Basic Guide"
+            }
+          }
+        },
+        "processor-comment": {
+          "labels-add": {
+            "text": {
+              "^#please-review$": "changes-addressed"
             }
           }
         }
