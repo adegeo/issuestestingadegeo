@@ -5,7 +5,8 @@
   "issue": {
     "opened": {
       "processor-default": {
-        "labels-add": [ ":watch: Not Triaged" ]
+        "labels-add": [ ":watch: Not Triaged", "Source - Docs.ms" ],
+        "labels-add": "books: Area - C# Guide"
       },
       "processor-meta-docs": {
         "default": {
