@@ -264,7 +264,11 @@
     "created": {
       "processor-comment": {
         "body": {
-          "^#please-review$": {}
+          "^#please-review$": {
+            "actions": {
+              "labels-add": "changes-addressed"
+            }
+          }
         }
       },
       "processor-conditions": {
