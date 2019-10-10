@@ -259,29 +259,30 @@
         }
       }
     },
-    "comment": {
-      "created": {
-        "processor-comment": {
-          "body": {
-            "^#please-review$": {}
+  },
+  "comment": {
+    "created": {
+      "processor-comment": {
+        "body": {
+          "^#please-review$": {}
+        }
+      },
+      "processor-conditions": {
+        "conditions": {
+          "processor-review": {
+            "changes-requested": {}
+          },
+          "processor-comment": {
+            "body": {
+              "^#please-review$": {}
+            }
           }
         },
-        "processor-conditions": {
-          "conditions": {
-            "processor-review": {
-              "changes-requested": {}
-            },
-            "processor-comment": {
-              "body": {
-                "^#please-review$": {}
-              }
-            }
-          },
-          "actions": {
-            "labels-add": "changes-addressed"
-          }
+        "actions": {
+          "labels-add": "changes-addressed"
         }
       }
     }
   }
+
 }
