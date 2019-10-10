@@ -5,8 +5,7 @@
   "issue": {
     "opened": {
       "processor-default": {
-        "labels-add": [ ":watch: Not Triaged", "Source - Docs.ms" ],
-        "labels-add": "books: Area - C# Guide"
+        "labels-add": [ ":watch: Not Triaged" ]
       },
       "processor-meta-docs": {
         "default": {
@@ -250,6 +249,13 @@
           "(?i).*docs\/visual-basic.*": {
             "labels-add": ":books: Area - Visual Basic Guide"
           }
+        }
+      }
+    },
+    "processor-comment": {
+      "body": {
+        "^#please-review$": {
+          "labels-add": "ACOMMENT"
         }
       }
     },
