@@ -251,23 +251,14 @@
           }
         }
       }
-    },
-    "processor-comment": {
-      "body": {
-        "^#please-review$": {
-          "labels-add": "ACOMMENT"
-        }
-      }
-    },
+    }
   },
   "comment": {
     "created": {
       "processor-comment": {
         "body": {
           "^#please-review$": {
-            "actions": {
-              "labels-add": "changes-addressed"
-            }
+            "labels-add": "changes-addressed"
           }
         }
       },
