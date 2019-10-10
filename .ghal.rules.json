@@ -145,6 +145,9 @@
   },
   "pullrequest": {
     "opened": {
+      "processor-default": {
+        "milestone-set": "![month]"
+      },
       "processor-files": {
         "changedfile": {
           "(?i).*docs\/architecture.*": {
@@ -260,6 +263,9 @@
           "^#please-review$": {
             "labels-add": "changes-addressed"
           }
+        },
+        "processor-state": {
+          
         }
       },
       "processor-conditions": {
