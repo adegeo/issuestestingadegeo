@@ -263,10 +263,10 @@
           "^#please-review$": {
             "labels-add": "changes-addressed"
           }
-        },
-        "processor-state": {
-          
         }
+      },
+      "processor-state": {
+
       },
       "processor-conditions": {
         "conditions": {
