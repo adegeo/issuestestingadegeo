@@ -266,7 +266,9 @@
         }
       },
       "processor-state": {
+        "Issue.State.StringValue == `1`": {
 
+        }
       },
       "processor-conditions": {
         "conditions": {
