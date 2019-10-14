@@ -148,109 +148,115 @@
       "processor-default": {
         "milestone-set": "![month]"
       },
-      "processor-files": {
-        "changedfile": {
-          "(?i).*docs\/architecture.*": {
-            "labels-add": ":books: Area - .NET Architecture Guide"
-          },
-          "(?i).*docs\/architecture\/blazor-for-web-forms-developers.*": {
-            "labels-add": ":book: guide - Blazor"
-          },
-          "(?i).*docs\/architecture\/cloud-native.*": {
-            "labels-add": ":book: guide - Cloud Native"
-          },
-          "(?i).*docs\/architecture\/containerized-lifecycle.*": {
-            "labels-add": ":book: guide - Docker lifecycle"
-          },
-          "(?i).*docs\/architecture\/grpc-for-wcf-developers.*": {
-            "labels-add": ":book: guide - gRPC"
-          },
-          "(?i).*docs\/architecture\/microservices.*": {
-            "labels-add": ":book: guide - .NET Microservices"
-          },
-          "(?i).*docs\/architecture\/modern-web-apps-azure.*": {
-            "labels-add": ":book: guide - ASP.NET Core web apps"
-          },
-          "(?i).*docs\/architecture\/modernize-with-azure-containers.*": {
-            "labels-add": ":book: guide - Modernizing w/ Windows containers"
-          },
-          "(?i).*docs\/architecture\/serverless.*": {
-            "labels-add": ":book: guide - Serverless apps"
-          },
-          "(?i).*docs\/core.*": {
-            "labels-add": ":books: Area - .NET Core Guide"
-          },
-          "(?i).*docs\/core\/tools.*": {
-            "labels-add": ":card_file_box: Technology - CLI"
-          },
-          "(?i).*docs\/core\/docker.*": {
-            "labels-add": ":card_file_box: Technology - Docker"
-          },
-          "(?i).*docs\/csharp.*": {
-            "labels-add": ":books: Area - C# Guide"
-          },
-          "(?i).*docs\/desktop-wpf*": {
-            "labels-add": ":books: Area - Desktop Guide,:card_file_box: Technology - WPF"
-          },
-          "(?i).*docs\/framework.*": {
-            "labels-add": ":books: Area - .NET Framework Guide"
-          },
-          "(?i).*docs\/framework\/configure-apps\/file-schema\/network.*": {
-            "labels-add": ":card_file_box: Technology - NCL"
-          },
-          "(?i).*docs\/framework\/configure-apps\/file-schema\/wcf.*": {
-            "labels-add": ":card_file_box: Technology - WCF"
-          },
-          "(?i).*docs\/framework\/data\/adonet.*": {
-            "labels-add": ":card_file_box: Technology - Data Access"
-          },
-          "(?i).*docs\/framework\/data\/wcf.*": {
-            "labels-add": ":card_file_box: Technology - WCF"
-          },
-          "(?i).*docs\/framework\/docker.*": {
-            "labels-add": ":card_file_box: Technology - Docker"
-          },
-          "(?i).*docs\/framework\/install.*": {
-            "labels-add": ":card_file_box: Technology - Installers"
-          },
-          "(?i).*docs\/framework\/migration-guide.*": {
-            "labels-add": ":card_file_box: Technology - AppCompat"
-          },
-          "(?i).*docs\/framework\/network-programming.*": {
-            "labels-add": ":card_file_box: Technology - NCL"
-          },
-          "(?i).*docs\/framework\/windows-workflow-foundation.*": {
-            "labels-add": ":card_file_box: Technology - WF"
-          },
-          "(?i).*docs\/framework\/wpf.*": {
-            "labels-add": ":card_file_box: Technology - WPF"
-          },
-          "(?i).*docs\/framework\/wcf.*": {
-            "labels-add": ":card_file_box: Technology - WCF"
-          },
-          "(?i).*docs\/framework\/winforms.*": {
-            "labels-add": ":card_file_box: Technology - WinForms"
-          },
-          "(?i).*docs\/fsharp.*": {
-            "labels-add": ":books: Area - F# Guide"
-          },
-          "(?i).*docs\/machine-learning.*": {
-            "labels-add": ":books: Area - ML.NET Guide"
-          },
-          "(?i).*docs\/spark.*": {
-            "labels-add": ":books: Area - .NET for Apache Spark Guide"
-          },
-          "(?i).*docs\/standard.*": {
-            "labels-add": ":books: Area - .NET Guide"
-          },
-          "(?i).*docs\/standard\/security.*": {
-            "labels-add": ":card_file_box: Technology - Security"
-          },
-          "(?i).*docs\/standard\/standard\/design-guidelines\/.*": {
-            "labels-add": ":book: guide - Framework Design Guidelines"
-          },
-          "(?i).*docs\/visual-basic.*": {
-            "labels-add": ":books: Area - Visual Basic Guide"
+      "processor-conditional": {
+        "type": "query",
+        "value": "PullRequest.base.ref == 'master'",
+        "processors": {
+          "processor-files": {
+            "changedfile": {
+              "(?i).*docs\/architecture.*": {
+                "labels-add": ":books: Area - .NET Architecture Guide"
+              },
+              "(?i).*docs\/architecture\/blazor-for-web-forms-developers.*": {
+                "labels-add": ":book: guide - Blazor"
+              },
+              "(?i).*docs\/architecture\/cloud-native.*": {
+                "labels-add": ":book: guide - Cloud Native"
+              },
+              "(?i).*docs\/architecture\/containerized-lifecycle.*": {
+                "labels-add": ":book: guide - Docker lifecycle"
+              },
+              "(?i).*docs\/architecture\/grpc-for-wcf-developers.*": {
+                "labels-add": ":book: guide - gRPC"
+              },
+              "(?i).*docs\/architecture\/microservices.*": {
+                "labels-add": ":book: guide - .NET Microservices"
+              },
+              "(?i).*docs\/architecture\/modern-web-apps-azure.*": {
+                "labels-add": ":book: guide - ASP.NET Core web apps"
+              },
+              "(?i).*docs\/architecture\/modernize-with-azure-containers.*": {
+                "labels-add": ":book: guide - Modernizing w/ Windows containers"
+              },
+              "(?i).*docs\/architecture\/serverless.*": {
+                "labels-add": ":book: guide - Serverless apps"
+              },
+              "(?i).*docs\/core.*": {
+                "labels-add": ":books: Area - .NET Core Guide"
+              },
+              "(?i).*docs\/core\/tools.*": {
+                "labels-add": ":card_file_box: Technology - CLI"
+              },
+              "(?i).*docs\/core\/docker.*": {
+                "labels-add": ":card_file_box: Technology - Docker"
+              },
+              "(?i).*docs\/csharp.*": {
+                "labels-add": ":books: Area - C# Guide"
+              },
+              "(?i).*docs\/desktop-wpf*": {
+                "labels-add": ":books: Area - Desktop Guide,:card_file_box: Technology - WPF"
+              },
+              "(?i).*docs\/framework.*": {
+                "labels-add": ":books: Area - .NET Framework Guide"
+              },
+              "(?i).*docs\/framework\/configure-apps\/file-schema\/network.*": {
+                "labels-add": ":card_file_box: Technology - NCL"
+              },
+              "(?i).*docs\/framework\/configure-apps\/file-schema\/wcf.*": {
+                "labels-add": ":card_file_box: Technology - WCF"
+              },
+              "(?i).*docs\/framework\/data\/adonet.*": {
+                "labels-add": ":card_file_box: Technology - Data Access"
+              },
+              "(?i).*docs\/framework\/data\/wcf.*": {
+                "labels-add": ":card_file_box: Technology - WCF"
+              },
+              "(?i).*docs\/framework\/docker.*": {
+                "labels-add": ":card_file_box: Technology - Docker"
+              },
+              "(?i).*docs\/framework\/install.*": {
+                "labels-add": ":card_file_box: Technology - Installers"
+              },
+              "(?i).*docs\/framework\/migration-guide.*": {
+                "labels-add": ":card_file_box: Technology - AppCompat"
+              },
+              "(?i).*docs\/framework\/network-programming.*": {
+                "labels-add": ":card_file_box: Technology - NCL"
+              },
+              "(?i).*docs\/framework\/windows-workflow-foundation.*": {
+                "labels-add": ":card_file_box: Technology - WF"
+              },
+              "(?i).*docs\/framework\/wpf.*": {
+                "labels-add": ":card_file_box: Technology - WPF"
+              },
+              "(?i).*docs\/framework\/wcf.*": {
+                "labels-add": ":card_file_box: Technology - WCF"
+              },
+              "(?i).*docs\/framework\/winforms.*": {
+                "labels-add": ":card_file_box: Technology - WinForms"
+              },
+              "(?i).*docs\/fsharp.*": {
+                "labels-add": ":books: Area - F# Guide"
+              },
+              "(?i).*docs\/machine-learning.*": {
+                "labels-add": ":books: Area - ML.NET Guide"
+              },
+              "(?i).*docs\/spark.*": {
+                "labels-add": ":books: Area - .NET for Apache Spark Guide"
+              },
+              "(?i).*docs\/standard.*": {
+                "labels-add": ":books: Area - .NET Guide"
+              },
+              "(?i).*docs\/standard\/security.*": {
+                "labels-add": ":card_file_box: Technology - Security"
+              },
+              "(?i).*docs\/standard\/standard\/design-guidelines\/.*": {
+                "labels-add": ":book: guide - Framework Design Guidelines"
+              },
+              "(?i).*docs\/visual-basic.*": {
+                "labels-add": ":books: Area - Visual Basic Guide"
+              }
+            }
           }
         }
       }
@@ -261,31 +267,16 @@
       "processor-comment": {
         "body": {
           "^#please-review$": {
-            "labels-add": "changes-addressed"
-          }
-        }
-      },
-      "processor-state": {
-        "Issue.State.StringValue == `1`": {
-
-        }
-      },
-      "processor-conditions": {
-        "conditions": {
-          "processor-review": {
-            "changes-requested": {}
-          },
-          "processor-comment": {
-            "body": {
-              "^#please-review$": {}
+            "condition-1": {
+              "type": "query",
+              "value": "Issue.state == 'open' && length(PullRequestReviews[?state == 'CHANGES_REQUESTED']) != `0`",
+              "actions": {
+                "labels-add": "changes-addressed"
+              }
             }
           }
-        },
-        "actions": {
-          "labels-add": "changes-addressed"
         }
       }
     }
   }
-
 }
