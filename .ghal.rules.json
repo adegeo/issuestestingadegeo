@@ -269,7 +269,7 @@
           "^#please-review$": {
             "condition-1": {
               "type": "query",
-              "value": "Issue.state == 'open' && length(PullRequestReviews[?state == 'CHANGES_REQUESTED' && author_association != 'NONE']) != `0`",
+              "value": "Issue.state == 'open' && Issue.user.id == Comment.user.id",
               "actions": {
                 "labels-add": "changes-addressed"
               }
