@@ -8,9 +8,6 @@
         "labels-add": [ ":watch: Not Triaged" ]
       },
       "processor-meta-docs": {
-        "default": {
-          "labels-add": "Source - Docs.ms"
-        },
         "product": {
           "(?i)dotnet-csharp$": {
             "labels-add": "books: Area - C# Guide"
