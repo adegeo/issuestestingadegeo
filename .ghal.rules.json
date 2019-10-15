@@ -146,7 +146,7 @@
   "pullrequest": {
     "opened": {
       "processor-default": {
-        "milestone-set": "![month]"
+        "milestone-set": "![clear]"
       },
       "processor-conditional": {
         "type": "query",
