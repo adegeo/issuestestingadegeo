@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "configRevision": 5,
+  "configRevision": 6,
 
   "issue": {
     "labeled": {
@@ -190,7 +190,8 @@
     },
     "opened": {
       "processor-default": {
-        "labels-add": [ ":watch: Not Triaged" ]
+        "labels-add": [ ":watch: Not Triaged" ],
+        "projects-add": "2"
       },
       "processor-meta-custom": {
         "issuetype": {
