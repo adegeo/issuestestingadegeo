@@ -33,9 +33,11 @@ jobs:
       run: |
         dotnet --info
 
-    - name: Pull rules file
+    - name: Pull rules file & app
       run: |
         curl https://raw.githubusercontent.com/${{github.repository}}/$MAIN_BRANCH/.ghal.rules.json -o rules.json
+        curl https://raw.githubusercontent.com/${{github.repository}}/$MAIN_BRANCH/.github/workflows/dependencies/repoman.tar -o repoman.tar
+        tar -xvf repoman.tar
 
     - name: debug info
       env:
