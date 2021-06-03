@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
-name: Snippets 5000
+name: RepoManAger 5000
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events on the main branch only.
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
 
 env:
   DOTNET_INSTALLER_CHANNEL: 'release/5.0.1xx'
@@ -38,8 +38,8 @@ jobs:
         curl https://raw.githubusercontent.com/${{github.repository}}/$MAIN_BRANCH/.ghal.rules.json -o rules.json
 
     - name: debug info
-      with:
-        repotoken: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cat $GITHUB_EVENT_PATH
 
