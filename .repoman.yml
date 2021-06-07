@@ -9,7 +9,7 @@ config:
     ParserRegex: "^\\* (.*): (.*)$"
 
 
-issue:
+issues:
 
   labeled:
 
@@ -350,7 +350,7 @@ pullrequest:
       pass:
         - projects-add: [132]
 
-comment:
+issue_comment:
 
   created:
 
