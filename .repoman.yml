@@ -1,4 +1,4 @@
-﻿revision: 1
+revision: 2
 schema-version: 1
 
 config:
@@ -11,6 +11,8 @@ config:
 
 issues:
 
+  unlabeled: "labeled"
+  
   labeled:
 
     - projects-add: [135]
@@ -60,6 +62,8 @@ issues:
     - labels-remove: ["in-progress", ":watch: Not Triaged"]
 
 pull_request:
+
+  reopened: opened
 
   opened:
 
