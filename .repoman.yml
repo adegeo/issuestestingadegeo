@@ -59,7 +59,7 @@ issues:
     # Issue closed, remove in-progress and not triaged labels
     - labels-remove: ["in-progress", ":watch: Not Triaged"]
 
-pullrequest:
+pull_request:
 
   opened:
 
