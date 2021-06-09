@@ -1,0 +1,365 @@
+[
+    {
+        "name":  ":book: [guide] .NET Microservices",
+        "color":  "#6cddcc",
+        "description":  ".NET Microservices architecture guidance"
+    },
+    {
+        "name":  ":book: [guide] ASP.NET Core web apps",
+        "color":  "#6cddcc",
+        "description":  "ASP.NET Core web apps architecture guidance"
+    },
+    {
+        "name":  ":book: [guide] Docker lifecycle",
+        "color":  "#6cddcc",
+        "description":  "Docker lifecycle architecture guidance"
+    },
+    {
+        "name":  ":book: [guide] Framework Design Guidelines",
+        "color":  "#6cddcc",
+        "description":  "Indicates issues that are related to the Framework Design Guidelines book"
+    },
+    {
+        "name":  ":book: [guide] Modernizing w/ Windows containers",
+        "color":  "#6cddcc",
+        "description":  "Modernizing w/ Windows containers architecture guidance"
+    },
+    {
+        "name":  ":book: [guide] Serverless apps",
+        "color":  "#6cddcc",
+        "description":  "Serverless apps architecture guidance"
+    },
+    {
+        "name":  ":books: [area] .NET Core Guide",
+        "color":  "#6cddcc",
+        "description":  ".NET Core content"
+    },
+    {
+        "name":  ":books: [area] .NET Framework Guide",
+        "color":  "#6cddcc",
+        "description":  ".NET Framework content"
+    },
+    {
+        "name":  ":books: [area] .NET Guide",
+        "color":  "#6cddcc",
+        "description":  ".NET content"
+    },
+    {
+        "name":  ":books: [area] API Reference",
+        "color":  "#6cddcc",
+        "description":  "API reference docs"
+    },
+    {
+        "name":  ":books: [area] Azure .NET SDk",
+        "color":  "#6cddcc",
+        "description":  "Azure .NET SDK"
+    },
+    {
+        "name":  ":books: [area] C# Guide",
+        "color":  "#6cddcc",
+        "description":  "C# language content"
+    },
+    {
+        "name":  ":books: [area] F# Guide",
+        "color":  "#6cddcc",
+        "description":  "F# language content"
+    },
+    {
+        "name":  ":books: [area] ML.NET Guide",
+        "color":  "#6cddcc",
+        "description":  "ML.NET content"
+    },
+    {
+        "name":  ":books: [area] Roslyn API Reference",
+        "color":  "#6cddcc",
+        "description":  "Roslyn API reference"
+    },
+    {
+        "name":  ":books: [area] Visual Basic Guide",
+        "color":  "#6cddcc",
+        "description":  "Visual Basic content"
+    },
+    {
+        "name":  ":card_file_box: [tech] .NET Architecture",
+        "color":  "#6cddcc",
+        "description":  ".NET architecture guidance ebooks"
+    },
+    {
+        "name":  ":card_file_box: [tech] .NET Standard",
+        "color":  "#6cddcc",
+        "description":  ".NET Standard"
+    },
+    {
+        "name":  ":card_file_box: [tech] AppCompat",
+        "color":  "#6cddcc",
+        "description":  ".NET Application compatibility"
+    },
+    {
+        "name":  ":card_file_box: [tech] Async Task",
+        "color":  "#6cddcc",
+        "description":  "Task Asynchronous Protocol (TAP), or async / await features"
+    },
+    {
+        "name":  ":card_file_box: [tech] C# / VB diagnostics",
+        "color":  "#6cddcc",
+        "description":  "C# or VB diagnostic tools"
+    },
+    {
+        "name":  ":card_file_box: [tech] C# / VB Specification",
+        "color":  "#6cddcc",
+        "description":  "C# or VB Language Specification"
+    },
+    {
+        "name":  ":card_file_box: [tech] CLI",
+        "color":  "#6cddcc",
+        "description":  ".NET CLI (Command Line Interface) tools"
+    },
+    {
+        "name":  ":card_file_box: [tech] Data Access",
+        "color":  "#6cddcc",
+        "description":  "Data APIs (ADO.NET, XML, etc)"
+    },
+    {
+        "name":  ":card_file_box: [tech] Docker",
+        "color":  "#6cddcc",
+        "description":  "Docker Containers with .NET and .NET Core"
+    },
+    {
+        "name":  ":card_file_box: [tech] Installers",
+        "color":  "#6cddcc",
+        "description":  "Install / uninstall / update of .NET (framework/core)"
+    },
+    {
+        "name":  ":card_file_box: [tech] NCL",
+        "color":  "#6cddcc",
+        "description":  "Networking"
+    },
+    {
+        "name":  ":card_file_box: [tech] Roslyn APIs",
+        "color":  "#6cddcc",
+        "description":  "Issues related to the .NET Compiler Platform SDK"
+    },
+    {
+        "name":  ":card_file_box: [tech] Security",
+        "color":  "#6cddcc",
+        "description":  "Issues related to security practices for .NET developers"
+    },
+    {
+        "name":  ":card_file_box: [tech] WCF",
+        "color":  "#6cddcc",
+        "description":  "WCF client or server"
+    },
+    {
+        "name":  ":card_file_box: [tech] WF",
+        "color":  "#6cddcc",
+        "description":  "Issues related to Windows Workflow in .NET"
+    },
+    {
+        "name":  ":card_file_box: [tech] WIF",
+        "color":  "#6cddcc",
+        "description":  "Issues or PRs related to Windows Information Foundation"
+    },
+    {
+        "name":  ":card_file_box: [tech] WinForms",
+        "color":  "#6cddcc",
+        "description":  "Issues that relate to Windows Forms"
+    },
+    {
+        "name":  ":card_file_box: [tech] WPF",
+        "color":  "#6cddcc",
+        "description":  "Issues that relate to Windows Presentation Foundation or XAML"
+    },
+    {
+        "name":  ":file_folder: [repo] docs",
+        "color":  "#c1f0e9",
+        "description":  "Issue is related to the docs repo."
+    },
+    {
+        "name":  ":file_folder: [repo] dotnet-api-docs",
+        "color":  "#c1f0e9",
+        "description":  "External dotnet-api-docs repo."
+    },
+    {
+        "name":  ":file_folder: [repo] ml-api-docs",
+        "color":  "#c1f0e9",
+        "description":  "Issue is related to the external ml-api-docs repo."
+    },
+    {
+        "name":  ":file_folder: [repo] roslyn-api-docs",
+        "color":  "#c1f0e9",
+        "description":  "Issue is related to the external roslyn-api-docs repo."
+    },
+    {
+        "name":  ":file_folder: [repo] samples",
+        "color":  "#c1f0e9",
+        "description":  "Issue is related to the external samples repo."
+    }
+]
+
+
+
+[
+    {
+        "name":  ":hammer: Not triaged",
+        "color":  "#e2b171",
+        "description":  "Has not been looked at. [state][status]"
+    },
+    {
+        "name":  ":hammer: Waiting on feedback",
+        "color":  "#e2b171",
+        "description":  "Issue cannot continue until we get feedback from product team or expert [state][status]"
+    },
+    {
+        "name":  ":hammer: In progress",
+        "color":  "#e2b171",
+        "description":  "Currently being worked on [state][status]"
+    },
+    {
+        "name":  ":hammer: Backlog [on hold]",
+        "color":  "#e2b171",
+        "description":  "Issue has been assigned to the backlog and is on hold until added to a sprint. [state][status]"
+    },
+    {
+        "name":  ":hammer: Under investigation",
+        "color":  "#e2b171",
+        "description":  "This is being looked at and investigated with the customer [state][status]"
+    },
+    {
+        "name":  ":hammer: Blocked",
+        "color":  "#e2b171",
+        "description":  "Issue is on hold because something is blocking [state][status]"
+    },
+    {
+        "name":  ":hammer: Needs more info",
+        "color":  "#e2b171",
+        "description":  "Need more information from the user [state][status]"
+    }
+]
+
+
+
+
+[
+    {
+        "name":  ":warning: Broken link",
+        "color":  "#ffc4cc",
+        "description":  "Link is broken [type][problem]"
+    },
+    {
+        "name":  ":warning: Question",
+        "color":  "#ffc4cc",
+        "description":  "Question about the article [type][problem]"
+    },
+    {
+        "name":  ":warning: Discussion",
+        "color":  "#ffc4cc",
+        "description":  "Issue is being used to discuss something related to the article [type][problem]"
+    },
+    {
+        "name":  ":warning: Needs update",
+        "color":  "#ffc4cc",
+        "description":  "The article needs to be updated with new information [type][problem]"
+    },
+    {
+        "name":  ":warning: Error on doc",
+        "color":  "#ffc4cc",
+        "description":  "The article has an error [type][problem]"
+    },
+    {
+        "name":  ":warning: Localization problem",
+        "color":  "#ffc4cc",
+        "description":  "Issue is related to localization [type][problem]"
+    },
+    {
+        "name":  ":warning: Site problem",
+        "color":  "#ffc4cc",
+        "description":  "Issue is related to the docs website [type][problem]"
+    }
+]
+
+
+
+[
+    {
+        "name":  ":heavy_check_mark: Fixed in PR",
+        "color":  "#128203",
+        "description":  "Issue has been resolved and will be closed. [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: Info provided",
+        "color":  "#128203",
+        "description":  "Issue was related to needing more information but did change the article. [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: No repro",
+        "color":  "#128203",
+        "description":  "Can't reproduce the issue [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: Invalid",
+        "color":  "#128203",
+        "description":  "Not an issue [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: Duplicate",
+        "color":  "#128203",
+        "description":  "Issue is a duplicate of another. Linked to issue in comment. [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: Won't fix",
+        "color":  "#128203",
+        "description":  "This issue is not going to fixed and instead will be closed. [resolved][resolution]"
+    },
+    {
+        "name":  ":heavy_check_mark: Closed by customer",
+        "color":  "#128203",
+        "description":  "Customer closed the issue. [resolved][resolution]"
+    }
+]
+
+
+
+
+[
+    {
+        "name":  "Source - Docs.ms",
+        "color":  "#ffffff",
+        "description":  "Issue came from the docs github feedback channel. [extra]"
+    },
+    {
+        "name":  ":apple: 1st-time docs contributor!",
+        "color":  "#fef2c0",
+        "description":  "Indicates PRs from new contributors to the docs repository [extra]"
+    },
+    {
+        "name":  "+:construction:+ Hold for related PR",
+        "color":  "#fef2c0",
+        "description":  "Indicates a PR can only be merged when other related PRs are merged (see comments for links) [extra]"
+    }
+]
+
+
+
+
+[
+    {
+        "name":  "P0",
+        "color":  "#b32d00",
+        "description":  "Critical issue that must be worked on asap. [priority]"
+    },
+    {
+        "name":  "P1",
+        "color":  "#ff531a",
+        "description":  "High priority issue. [priority]"
+    },
+    {
+        "name":  "P2",
+        "color":  "#ff9900",
+        "description":  "Normal priority issue. Good for community to help out on. [priority]"
+    },
+    {
+        "name":  "P3",
+        "color":  "#ffd699",
+        "description":  "Never going to be worked on unless a community member wants to help . [priority]"
+    }
+]
