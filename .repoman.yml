@@ -138,6 +138,9 @@ pull_request:
             - path: "(?i).*docs\/csharp.*"
               run:
                 - labels-add: ["dotnet-csharp/prod"]
+            - path: "(?i).*docs\/csharp\/fundamentals.*"
+              run:
+                - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
             - path: "(?i).*docs\/csharp\/misc.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-diagnostics/tech"]
@@ -150,9 +153,6 @@ pull_request:
             - path: "(?i).*docs\/csharp\/linq.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-linq/tech"]
-            - path: "(?i).*docs\/csharp\/programming-guide\/main-and-command-args.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
             - path: "(?i).*docs\/csharp\/programming-guide\/indexers.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
@@ -171,18 +171,12 @@ pull_request:
             - path: "(?i).*docs\/csharp\/programming-guide\/interop.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-advanced-concepts/tech"]
-            - path: "(?i).*docs\/csharp\/programming-guide\/unsafe-code-pointers.*"
+            - path: "(?i).*docs\/csharp\/language-reference\/unsafe-code.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-advanced-concepts/tech"]
-            - path: "(?i).*docs\/csharp\/programming-guide\/exceptions.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
             - path: "(?i).*docs\/csharp\/programming-guide\/namespaces.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
-            - path: "(?i).*docs\/csharp\/programming-guide\/nullable-types.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-null-safety/tech"]
             - path: "(?i).*docs\/csharp\/programming-guide\/arrays.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
@@ -219,22 +213,13 @@ pull_request:
             - path: "(?i).*docs\/csharp\/programming-guide\/events.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
-            - path: "(?i).*docs\/csharp\/programming-guide\/inside-a-program.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-get-started/tech"]
             - path: "(?i).*docs\/csharp\/programming-guide\/interfaces.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
-            - path: "(?i).*docs\/csharp\/getting-started.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-get-started/tech"]
             - path: "(?i).*docs\/csharp\/tutorials.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-fundamentals/tech"]
             - path: "(?i).*docs\/csharp\/tutorials\/exploration.*"
-              run:
-                - labels-add: ["dotnet-csharp/prod", "csharp-get-started/tech"]
-            - path: "(?i).*docs\/csharp\/tutorials\/intro-to-csharp.*"
               run:
                 - labels-add: ["dotnet-csharp/prod", "csharp-get-started/tech"]
             - path: "(?i).*docs\/csharp\/language-reference.*"
