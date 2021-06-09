@@ -1,4 +1,4 @@
-revision: 2
+revision: 3
 schema-version: 1
 
 config:
@@ -14,8 +14,6 @@ issues:
   unlabeled: "labeled"
   
   labeled:
-
-    - projects-add: [135]
 
     # Handle issues with /prod /tech labels from label bot
     # Manages the Not Triaged label for issues missing/having an org category issue
@@ -348,9 +346,10 @@ pull_request:
 
   labeled:
 
+    # Add to .NET 6 project if .NET 6 label added
     - check:
         - type: query
-          value: "Issue.state == 'open' && Issue.user.id == Comment.user.id"
+          value: "length(Issue.labels[?name == ':checkered_flag: Release .NET 6']) != `0`"
       pass:
         - projects-add: [132]
 
