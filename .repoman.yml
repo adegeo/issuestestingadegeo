@@ -25,6 +25,14 @@ issues:
       pass:
         - labels-add: ["Source - Docs.ms"]
 
+    - check:
+        - type: metadata-comment
+          name: "issue type"
+          value: "(?i)breaking-change$"
+      pass:
+        - labels-add: ["breaking-change", "doc-idea"]
+        - projects-add: [2]
+
         # Checks for specific paths
         - check:
             - type: metadata-comment
