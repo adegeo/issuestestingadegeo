@@ -1,4 +1,4 @@
-revision: 2
+revision: 3
 schema-version: 1
 owner-ms-alias: adegeo
 
@@ -16,8 +16,6 @@ issues:
   opened:
     # New issue opened, add Not Triaged  
     - labels-add: [":watch: Not Triaged"]
-    - projects-add: [2]
-
 
     # default for doc comment
     - check:
@@ -27,7 +25,7 @@ issues:
 
     - check:
         - type: metadata-comment
-          name: "issue type"
+          name: issue type
           value: "(?i)breaking-change$"
       pass:
         - labels-add: ["breaking-change", "doc-idea"]
