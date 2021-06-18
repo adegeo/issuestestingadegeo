@@ -1,4 +1,4 @@
-﻿revision: 1
+revision: 2
 schema-version: 1
 owner-ms-alias: adegeo
 
@@ -16,6 +16,7 @@ issues:
   opened:
     # New issue opened, add Not Triaged  
     - labels-add: [":watch: Not Triaged"]
+    - projects-add: [2]
 
 
     # default for doc comment
