@@ -18,7 +18,7 @@ pull_request:
 
     - predefined: section1
 
-    - assignee-add: ["boblawblah", "adegeo"]
+    - assignee-add: "adegeo"
 
 issues: 
 
