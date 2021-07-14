@@ -10,7 +10,7 @@ config:
     ParserRegex: "^\\* (.*): (.*)$"
 
 
-issues:
+pull_request:
 
   ready_for_review:
     - variable-set:
@@ -22,7 +22,10 @@ issues:
       value: false
 
     - variable-remove:
-      name: IsReady      
+      name: IsReady     
+
+
+issues: 
 
   opened:
     # New issue opened, add Not Triaged  
