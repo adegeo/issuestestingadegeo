@@ -109,6 +109,6 @@ predefined:
 
       pass:
         - comment: >
-          this is a comment I'm adding to the issue.
-          please tag $adegeo for more information
-          An error occured!!
+            this is a comment I'm adding to the issue.
+            please tag $adegeo for more information
+            An error occured!!
