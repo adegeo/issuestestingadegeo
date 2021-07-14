@@ -18,6 +18,7 @@ pull_request:
 
     - predefined: section1
 
+    - assignee-add: ["boblawblah", "adegeo"]
 
 issues: 
 
@@ -99,7 +100,7 @@ predefined:
 
   section1:
     - variable-set:
-      name: IsReady
+      name: IsReaady
       value: "true"
 
     - check:
