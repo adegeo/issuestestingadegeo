@@ -100,7 +100,7 @@ predefined:
   section1:
     - variable-set:
       name: IsReaady
-      value: "false"
+      value: "true"
 
     - check:
         - type: variable
@@ -108,5 +108,7 @@ predefined:
           value: true
 
       pass:
-        - variable-remove:
-          name: IsReady 
+        - comment: >
+          this is a comment I'm adding to the issue.
+          please tag $adegeo for more information
+          An error occured!!
