@@ -99,7 +99,7 @@ predefined:
 
   section1:
     - variable-set:
-      name: IsReaady
+      name: IsReady
       value: "true"
 
     - check:
