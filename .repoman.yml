@@ -12,6 +12,8 @@ config:
 
 pull_request:
 
+  converted_to_draft: ready_for_review
+
   ready_for_review:
     - variable-set
       name: IsReady
