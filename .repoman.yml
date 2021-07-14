@@ -16,7 +16,7 @@ pull_request:
 
   ready_for_review:
     - variable-set:
-      name: IsReady
+      name: IsReaady
       value: "false"
 
     - check:
