@@ -13,13 +13,13 @@ config:
 pull_request:
 
   ready_for_review:
-    - variable-set:
+    - variable-set
       name: IsReady
       value: true
 
-    - variable-set:
-      name: IsReady
-      value: false
+    - variable-set
+        name: IsReady
+        value: false
 
     - variable-remove:
       name: IsReady     
