@@ -18,8 +18,8 @@ pull_request:
 
     - predefined: section1
 
-    - assignee-add: "adegeo"
-    - reviewer-add: "thraka"
+    - assignee-add: ["adegeo", "thraka"]
+    - reviewer-add: "adegeo"
 
 issues: 
 
