@@ -19,12 +19,14 @@ pull_request:
       name: IsReady
       value: true
 
-    - variable-set:
-      name: IsReady
-      value: false
+    - check:
+        - type: variable
+          name: IsReady
+          value: true
 
-    - variable-remove:
-      name: IsReady     
+      pass:
+        - variable-remove:
+          name: IsReady 
 
 
 issues: 
