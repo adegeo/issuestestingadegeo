@@ -15,18 +15,8 @@ pull_request:
   converted_to_draft: ready_for_review
 
   ready_for_review:
-    - variable-set:
-      name: IsReaady
-      value: "false"
 
-    - check:
-        - type: variable
-          name: IsReady
-          value: true
-
-      pass:
-        - variable-remove:
-          name: IsReady 
+    - predefined: section1
 
 
 issues: 
