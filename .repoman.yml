@@ -18,8 +18,8 @@ pull_request:
       value: true
 
     - variable-set
-        name: IsReady
-        value: false
+      name: IsReady
+      value: false
 
     - variable-remove:
       name: IsReady     
