@@ -12,6 +12,17 @@ config:
 
 issues:
 
+  ready_for_review:
+    - variable-set:
+      name: IsReady
+      value: true
+
+    - variable-set:
+      name: IsReady
+      value: false
+
+    - variable-remove:
+      name: IsReady      
 
   opened:
     # New issue opened, add Not Triaged  
