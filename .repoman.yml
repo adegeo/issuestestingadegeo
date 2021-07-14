@@ -19,6 +19,7 @@ pull_request:
     - predefined: section1
 
     - assignee-add: "adegeo"
+    - reviewer-add: "thraka"
 
 issues: 
 
