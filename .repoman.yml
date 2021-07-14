@@ -94,3 +94,19 @@ issues:
               value: "(?i).*main\/aspnetcore\/tutorials\/signalr*.*"
           pass:
             - labels-add: ["SignalR"]
+
+predefined:
+
+  section1:
+    - variable-set:
+      name: IsReaady
+      value: "false"
+
+    - check:
+        - type: variable
+          name: IsReady
+          value: true
+
+      pass:
+        - variable-remove:
+          name: IsReady 
