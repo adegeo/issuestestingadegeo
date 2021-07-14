@@ -108,7 +108,8 @@ predefined:
           value: true
 
       pass:
-        - comment: >
-            this is a comment I'm adding to the issue.\n
-            please tag $adegeo for more information\n
-            An error occured!!
+        - comment: |
+            ### Heading
+            
+            * Bullet
+            * Points
