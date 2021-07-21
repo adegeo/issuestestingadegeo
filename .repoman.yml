@@ -27,6 +27,12 @@ issues:
     # New issue opened, add Not Triaged  
     - labels-add: [":watch: Not Triaged"]
 
+    - check:
+        - type: query
+          value: "Issue.state == 'open2' && Issue.user.id == Comment.user.id"
+      pass:
+        - labels-add: ["some label"]
+
     # default for doc comment
     - check:
         - type: metadata-exists
