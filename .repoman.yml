@@ -29,9 +29,15 @@ issues:
 
     - check:
         - type: query
-          value: "Issue.state == 'open2' && Issue.user.id == Comment.user.id"
+          value: "contains(Issue.body, '- [x] Binary incompatible') == `true`"
       pass:
-        - labels-add: ["some label"]
+        - labels-add: ["binary incompatible"]
+
+    - check:
+        - type: query
+          value: "contains(Issue.body, '- [x] Source incompatible') == `true`"
+      pass:
+        - labels-add: ["source incompatible"]
 
     # default for doc comment
     - check:
