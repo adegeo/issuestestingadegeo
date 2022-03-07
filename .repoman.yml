@@ -23,6 +23,18 @@ pull_request:
 
 issues: 
 
+  closed:
+
+    # Issue closed, remove in-progress and not triaged labels
+    - labels-remove: ["in-progress", ":watch: Not Triaged"]
+
+    # Check if the issue was closed by the user who opened it
+    - check:
+        - type: query
+          value: "Issue.user.id == Issue.closed_by.id"
+      pass:
+        - labels-add: ["resolved-by-customer"]
+
   opened:
     # New issue opened, add Not Triaged  
     - labels-add: [":watch: Not Triaged"]
