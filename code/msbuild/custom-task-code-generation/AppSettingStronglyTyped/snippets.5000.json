@@ -1,9 +1,4 @@
 {
-    "host": "dotnet",
-    "expectederrors": [
-        {
-            "file": "./msbuild/rest-api-client-generation/PetReaderToolTaskExample/PetReaderToolTaskExample/PetReaderToolTaskExample.sln",
-            "error": "D:\\a\\samples\\samples\\msbuild\\rest-api-client-generation\\PetReaderToolTaskExample\\PetReaderToolTaskExample\\PetRestApiClient\\PetRestApiClient.csproj(27,9): error MSB6004: The specified task executable location \"C:\\Nwag\\Win\\NSwag.exe\" is invalid."
-        }
-    ]
+    "host": "custom",
+    "command": "dotnet build \"$projectFile\"\ndotnet pack -o . $(Resolve-Path \"$configFile\\..\\AppSettingStronglyTyped\\AppSettingStronglyTyped.csproj\")"
 }
