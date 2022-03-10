@@ -231,6 +231,7 @@ public class ResultItem
     public string BuildOutput;
     public MSBuildError[] Errors;
     public int ErrorCount;
+    public object Settings;
 
     public class MSBuildError
     {
@@ -246,6 +247,7 @@ $transformedItems = $resultItems | ForEach-Object { New-Object ResultItem -Prope
                                                     InputFile = $_.InputFile;
                                                     ExitCode = $_.ExitCode;
                                                     BuildOutput = $_.Output;
+                                                    Settings = $_.Settings;
                                                     Errors = @();
                                                     ErrorCount = 0}
                                                   }
