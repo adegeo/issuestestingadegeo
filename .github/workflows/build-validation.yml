@@ -5,7 +5,7 @@ name: 'Snippets 5000'
 # events on the main branch only.
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
