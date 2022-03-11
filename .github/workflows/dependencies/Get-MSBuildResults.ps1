@@ -180,7 +180,7 @@ foreach ($item in $workingSet) {
             Write-Host
 
             Invoke-Expression ".\run.bat" | Tee-Object -Variable "result"
-            
+
             $thisExitCode = $LASTEXITCODE
             
             New-Result $data[1] $projectFile $thisExitCode $result $settings
@@ -247,7 +247,7 @@ $transformedItems = $resultItems | ForEach-Object { New-Object ResultItem -Prope
                                                     Settings = $_.Settings;
                                                     Errors = @();
                                                     ErrorCount = 0;
-                                                  }
+                                                  } }
 
 # Transform the build output to break it down into MSBuild result entries
 foreach ($item in $transformedItems) {
