@@ -40,6 +40,8 @@ Write-Host "Total errors: $count"
 
 foreach ($er in $errors) {
 
+    $skipError = $false
+
     $lineColMatch = $er.Line | Select-String "(^.*)\((\d*),(\d*)\)" | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Groups
     $errorFile = $er.InputFile
     $errorLineNumber = 0
@@ -53,15 +55,24 @@ foreach ($er in $errors) {
 
     # Check if there are any errors that should be skipped because they're known failures
     foreach ($expectedError in $er.Settings.expectederrors) {
-        #Write-Host "Found skippable: "
-        #Write-Host "file: $($expectedError.file)"
-        #Write-Host "error: $($expectedError.error)"
+        if (($expectedError.file -eq $errorFile) -and ($expectedError.error -eq $er.error)) {
+            $skipError = $true
+            break
+        }
     }
 
-
-    Write-Host "::error file=$errorFile,line=$errorLineNumber,col=$errorColNumber::$($er.Line)"
+    if ($skipError -eq $false) {
+        Write-Host "::error file=$errorFile,line=$errorLineNumber,col=$errorColNumber::$($er.Line)"
+    }
+    else {
+        $count -= 1
+    }
 }
 
+Write-Host "Errors after skips: $count"
 
+if ($count -eq 0) {
+    exit 0
+}
 
 exit 1
