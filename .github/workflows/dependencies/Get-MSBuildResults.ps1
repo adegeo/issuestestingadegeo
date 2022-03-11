@@ -179,9 +179,13 @@ foreach ($item in $workingSet) {
             Get-Content .\run.bat | Write-Host
             Write-Host
 
+            $thisExitCode = 0
+
             Invoke-Expression ".\run.bat" | Out-String | Tee-Object -Variable "result"
 
-            $thisExitCode = $LASTEXITCODE
+            if ($LASTEXITCODE -ne 0) {
+                $thisExitCode = 4
+            }
             
             New-Result $data[1] $projectFile $thisExitCode $result $settings
         }
