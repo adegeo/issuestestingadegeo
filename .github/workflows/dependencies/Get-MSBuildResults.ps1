@@ -300,11 +300,16 @@ foreach ($item in $transformedItems) {
 
     # After errors collected, collect known errors
     if ($item.Settings -ne $null) {
+        Write-Host "Settings element found"
         if ($item.Settings.expectederrors -ne $null) {
 
+            Write-Host "Expected errors found"
             $listKnownErrors = @()
 
             foreach ($errorItem in $transformedItems) {
+                Write-Host "Found: "
+                Write-Host $errorItem.file
+                Write-Host $errorItem.error
                 $listKnownErrors += New-Object -TypeName "ResultItem+KnownError" -Property @{ File = $errorItem.file ; Error = $errorItem.error }
             }
 
@@ -313,7 +318,7 @@ foreach ($item in $transformedItems) {
     }
 
     foreach ($knownErrorItem in $item.KnownErrors) {
-        
+        Write-Host "Transformed error item: $knownErrorItem"
     }
     
 }
