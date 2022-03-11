@@ -35,7 +35,7 @@
     Author:         adegeo@microsoft.com
     Creation Date:  12/11/2020
     Update Date:    03/10/2022
-    Purpose/Change: Add known errors config.
+    Purpose/Change: Export proj/sln settings config to output.json file.
 #>
 
 [CmdletBinding()]
@@ -180,11 +180,8 @@ foreach ($item in $workingSet) {
             Write-Host
 
             Invoke-Expression ".\run.bat" | Tee-Object -Variable "result"
-            $thisExitCode = 0
-
-            if ($LASTEXITCODE -ne 0) {
-                $thisExitCode = 4
-            }
+            
+            $thisExitCode = $LASTEXITCODE
             
             New-Result $data[1] $projectFile $thisExitCode $result $settings
         }
@@ -232,17 +229,10 @@ public class ResultItem
     public object Settings;
     public MSBuildError[] Errors;
     public int ErrorCount;
-    public KnownError[] KnownErrors;
 
     public class MSBuildError
     {
         public string Line;
-        public string Error;
-    }
-
-    public class KnownError
-    {
-        public string File;
         public string Error;
     }
 }
@@ -257,7 +247,6 @@ $transformedItems = $resultItems | ForEach-Object { New-Object ResultItem -Prope
                                                     Settings = $_.Settings;
                                                     Errors = @();
                                                     ErrorCount = 0;
-                                                    KnownErrors = @()}
                                                   }
 
 # Transform the build output to break it down into MSBuild result entries
@@ -297,29 +286,6 @@ foreach ($item in $transformedItems) {
 
     # Set build errors
     $item.Errors = $list
-
-    # After errors collected, collect known errors
-    if ($item.Settings -ne $null) {
-        Write-Host "Settings element found"
-        if ($item.Settings.expectederrors -ne $null) {
-
-            Write-Host "Expected errors found"
-            $listKnownErrors = @()
-
-            foreach ($errorItem in $item.Settings.expectederrors) {
-                Write-Host "Found: "
-                Write-Host "file: $($errorItem.file)"
-                Write-Host "error: $($errorItem.error)"
-                $listKnownErrors += New-Object -TypeName "ResultItem+KnownError" -Property @{ File = $errorItem.file ; Error = $errorItem.error }
-            }
-
-            $item.KnownErrors = $listKnownErrors
-        }
-    }
-
-    foreach ($knownErrorItem in $item.KnownErrors) {
-        Write-Host "Transformed error item: $knownErrorItem"
-    }
     
 }
 
