@@ -308,8 +308,8 @@ foreach ($item in $transformedItems) {
 
             foreach ($errorItem in $transformedItems) {
                 Write-Host "Found: "
-                Write-Host $errorItem.file
-                Write-Host $errorItem.error
+                Write-Host "file: $($errorItem.file)"
+                Write-Host "error: $($errorItem.error)"
                 $listKnownErrors += New-Object -TypeName "ResultItem+KnownError" -Property @{ File = $errorItem.file ; Error = $errorItem.error }
             }
 
@@ -323,7 +323,7 @@ foreach ($item in $transformedItems) {
     
 }
 
-$transformedItems | ConvertTo-Json -Depth 3 | Out-File 'output.json'
+$transformedItems | ConvertTo-Json -Depth 4 | Out-File 'output.json'
 
 exit 0
 
