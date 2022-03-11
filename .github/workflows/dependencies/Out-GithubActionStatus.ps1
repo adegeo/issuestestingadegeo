@@ -56,6 +56,7 @@ foreach ($er in $errors) {
     # Check if there are any errors that should be skipped because they're known failures
     foreach ($expectedError in $er.Settings.expectederrors) {
         if (($expectedError.file -eq $errorFile) -and ($expectedError.error -eq $er.error)) {
+            Write-Host "Skipping error:`n- File: $errorFile`n- Error: $($er.error)"
             $skipError = $true
             break
         }
