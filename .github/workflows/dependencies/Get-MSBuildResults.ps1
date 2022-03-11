@@ -306,7 +306,7 @@ foreach ($item in $transformedItems) {
             Write-Host "Expected errors found"
             $listKnownErrors = @()
 
-            foreach ($errorItem in $transformedItems) {
+            foreach ($errorItem in $item.Settings.expectederrors) {
                 Write-Host "Found: "
                 Write-Host "file: $($errorItem.file)"
                 Write-Host "error: $($errorItem.error)"
