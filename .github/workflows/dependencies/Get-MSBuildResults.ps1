@@ -219,7 +219,7 @@ foreach ($item in $workingSet) {
     $counter++
 }
 
-$resultItems = $Global:statusOutput | Select-Object InputFile, ProjectFile, ExitCode, Output
+$resultItems = $Global:statusOutput | Select-Object InputFile, ProjectFile, ExitCode, Output, Settings
 
 # Add our output type
 $typeResult = @"
@@ -259,7 +259,7 @@ $transformedItems = $resultItems | ForEach-Object { New-Object ResultItem -Prope
                                                     ErrorCount = 0;
                                                     KnownErrors = @()}
                                                   }
-         
+
 # Transform the build output to break it down into MSBuild result entries
 foreach ($item in $transformedItems) {
     $list = @()
