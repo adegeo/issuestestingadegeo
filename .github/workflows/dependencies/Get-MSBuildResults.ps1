@@ -179,7 +179,7 @@ foreach ($item in $workingSet) {
             Get-Content .\run.bat | Write-Host
             Write-Host
 
-            Invoke-Expression ".\run.bat" | Tee-Object -Variable "result"
+            Invoke-Expression ".\run.bat" | Out-String | Tee-Object -Variable "result"
 
             $thisExitCode = $LASTEXITCODE
             
