@@ -229,6 +229,7 @@ public class ResultItem
     public string InputFile;
     public int ExitCode;
     public string BuildOutput;
+    public object Settings;
     public MSBuildError[] Errors;
     public int ErrorCount;
     public KnownError[] KnownErrors;
