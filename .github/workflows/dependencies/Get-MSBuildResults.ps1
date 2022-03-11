@@ -231,11 +231,17 @@ public class ResultItem
     public string BuildOutput;
     public MSBuildError[] Errors;
     public int ErrorCount;
-    public object Settings;
+    public KnownError[] KnownErrors;
 
     public class MSBuildError
     {
         public string Line;
+        public string Error;
+    }
+
+    public class KnownError
+    {
+        public string File;
         public string Error;
     }
 }
@@ -249,7 +255,8 @@ $transformedItems = $resultItems | ForEach-Object { New-Object ResultItem -Prope
                                                     BuildOutput = $_.Output;
                                                     Settings = $_.Settings;
                                                     Errors = @();
-                                                    ErrorCount = 0}
+                                                    ErrorCount = 0;
+                                                    KnownErrors = @()}
                                                   }
          
 # Transform the build output to break it down into MSBuild result entries
@@ -287,10 +294,26 @@ foreach ($item in $transformedItems) {
         }
     }
 
-    # After errors collected, scan for errors to cull
-    
-
+    # Set build errors
     $item.Errors = $list
+
+    # After errors collected, collect known errors
+    if ($item.Settings -ne $null) {
+        if ($item.Settings.expectederrors -ne $null) {
+
+            $listKnownErrors = @()
+
+            foreach ($errorItem in $transformedItems) {
+                $listKnownErrors += New-Object -TypeName "ResultItem+KnownError" -Property @{ File = $errorItem.file ; Error = $errorItem.error }
+            }
+
+            $item.KnownErrors = $listKnownErrors
+        }
+    }
+
+    foreach ($knownErrorItem in $item.KnownErrors) {
+        
+    }
     
 }
 
