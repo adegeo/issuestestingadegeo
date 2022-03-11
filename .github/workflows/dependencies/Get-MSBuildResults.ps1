@@ -131,13 +131,18 @@ foreach ($item in $workingSet) {
                 
         $data = $item.Split('|')
 
-        if ($data[1].Contains("mono-samples")){
-            Write-Host "Found mono-sample project, Skipping."
-            $counter++
-            Continue
-        }
+        # this was added to avoid compile errors in the dotnet/samples repo mono-samples folder.
+        # I don't think this is needed now that we have ways to avoid errors
+        # leaving this here for reference
+        #
+        #if ($data[1].Contains("mono-samples")){
+        #    Write-Host "Found mono-sample project, Skipping."
+        #    $counter++
+        #    Continue
+        #}
+
         # Project found, build it
-        elseif ([int]$data[0] -eq 0) {
+        if ([int]$data[0] -eq 0) {
             $projectFile = Resolve-Path "$RepoRootDir\$($data[2])"
             $configFile = [System.IO.Path]::Combine([System.IO.Path]::GetDirectoryName($projectFile), "snippets.5000.json")
             $settings = $null
