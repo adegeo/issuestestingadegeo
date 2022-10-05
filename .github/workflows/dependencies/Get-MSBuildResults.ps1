@@ -74,7 +74,7 @@ Param(
 
 $Global:statusOutput = @()
 
-Write-Host "Gathering solutions and projects... (v1.8c)"
+Write-Host "Gathering solutions and projects... (v1.8)"
 
 if ($PullRequest -ne 0) {
     Write-Host "Running `"LocateProjects `"$RepoRootDir`" --pullrequest $PullRequest --owner $RepoOwner --repo $RepoName`""
@@ -208,7 +208,6 @@ foreach ($item in $workingSet) {
             do {
 
                 $configFile = [System.IO.Path]::Combine($filePath, "snippets.5000.json")
-                Write-Host "Settings file scan: $configFile"
 
                 if ([System.IO.File]::Exists($configFile) -eq $true) {
 
