@@ -212,13 +212,16 @@ foreach ($item in $workingSet) {
                 if ([System.IO.File]::Exists($configFile) -eq $true) {
 
                     $settings = $configFile | Get-ChildItem | Get-Content | ConvertFrom-Json
-
+                    Write-Host "Loading settings for errors found by LocateProjects: $configFile"
                     break
                 }
 
                 # go back one folder
                 $filePath = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($filePath, "..\"))
             } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }))
+
+            if ($configFile -eq $null)
+                Write-Host "No settings file found for LocateProjects reported error"
 
             # Process each error
             if ([int]$data[0] -eq 1) {
