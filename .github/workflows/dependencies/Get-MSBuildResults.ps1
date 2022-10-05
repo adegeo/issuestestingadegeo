@@ -221,9 +221,10 @@ foreach ($item in $workingSet) {
                 $filePath = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($filePath, "..\"))
             } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }) -eq 1)
 
-            if ($settings -eq $null)
+            if ($settings -eq $null) {
                 Write-Host "No settings file found for LocateProjects reported error"
-
+            }
+            
             # Process each error
             if ([int]$data[0] -eq 1) {
                 New-Result $data[1] "" 1 "ERROR: Project missing. A project (and optionally a solution file) must be in this directory or one of the parent directories to validate and build this code." $settings
