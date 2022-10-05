@@ -74,7 +74,7 @@ Param(
 
 $Global:statusOutput = @()
 
-Write-Host "Gathering solutions and projects... (v1.8b)"
+Write-Host "Gathering solutions and projects... (v1.8c)"
 
 if ($PullRequest -ne 0) {
     Write-Host "Running `"LocateProjects `"$RepoRootDir`" --pullrequest $PullRequest --owner $RepoOwner --repo $RepoName`""
@@ -208,17 +208,21 @@ foreach ($item in $workingSet) {
             do {
 
                 $configFile = [System.IO.Path]::Combine($filePath, "snippets.5000.json")
+                Write-Host "Settings file scan: $configFile"
 
                 if ([System.IO.File]::Exists($configFile) -eq $true) {
 
                     $settings = $configFile | Get-ChildItem | Get-Content | ConvertFrom-Json
-
+                    Write-Host "Loading settings for errors found by LocateProjects: $configFile"
                     break
                 }
 
                 # go back one folder
                 $filePath = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($filePath, "..\"))
-            } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }))
+            } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }) -eq 1)
+
+            if ($settings -eq $null)
+                Write-Host "No settings file found for LocateProjects reported error"
 
             # Process each error
             if ([int]$data[0] -eq 1) {
