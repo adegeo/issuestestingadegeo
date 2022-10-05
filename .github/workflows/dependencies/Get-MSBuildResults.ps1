@@ -74,7 +74,7 @@ Param(
 
 $Global:statusOutput = @()
 
-Write-Host "Gathering solutions and projects... (v1.8)"
+Write-Host "Gathering solutions and projects... (v1.8a)"
 
 if ($PullRequest -ne 0) {
     Write-Host "Running `"LocateProjects `"$RepoRootDir`" --pullrequest $PullRequest --owner $RepoOwner --repo $RepoName`""
@@ -114,13 +114,13 @@ if (($RangeStart -ne 0) -and ($RangeEnd -ne 0)){
 # Log working set items prior to filtering
 $workingSet | Write-Host
 
-# Remove duplicated projects
+# Remove duplicated projects and skip snippets files from being processed
 $projects = @()
 $workingSetTemp = @()
 
 foreach ($item in $workingSet) {
     $data = $item.Split('|')
-    if ($projects.Contains($data[2].Trim())) {
+    if ($projects.Contains($data[2].Trim()) -or $data[1].EndsWith("snippets.5000.json")) {
         continue
     }
     if ($data[2].Trim() -ne "") {
