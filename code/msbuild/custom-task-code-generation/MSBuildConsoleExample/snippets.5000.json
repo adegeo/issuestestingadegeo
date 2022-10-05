@@ -1,4 +1,11 @@
 {
-    "host": "custom",
-    "command": "dotnet nuget add source \"$RepoRootDir\" -n \"local\" \ndotnet build \"$projectFile\""
+    "host": "dotnet",
+    "expectederrors": [
+        {
+            "file": "code/msbuild/custom-task-code-generation/MSBuildConsoleExample/MSBuildConsoleExample/AppSettingStronglyTyped2.csproj",
+            "error": "ERROR: Too many projects found. A single project or solution must exist in this directory or one of the parent directories."
+        }
+    ]
+    
+    
 }
