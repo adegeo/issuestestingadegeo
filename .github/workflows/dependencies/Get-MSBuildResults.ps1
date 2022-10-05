@@ -74,7 +74,11 @@ Param(
 
 $Global:statusOutput = @()
 
+<<<<<<< HEAD
 Write-Host "Gathering solutions and projects... (v1.8b)"
+=======
+Write-Host "Gathering solutions and projects... (v1.8c)"
+>>>>>>> c17bad3774e789f5496a4694ee4a0d704460b4f4
 
 if ($PullRequest -ne 0) {
     Write-Host "Running `"LocateProjects `"$RepoRootDir`" --pullrequest $PullRequest --owner $RepoOwner --repo $RepoName`""
@@ -208,6 +212,7 @@ foreach ($item in $workingSet) {
             do {
 
                 $configFile = [System.IO.Path]::Combine($filePath, "snippets.5000.json")
+                Write-Host "Settings file scan: $configFile"
 
                 if ([System.IO.File]::Exists($configFile) -eq $true) {
 
@@ -218,11 +223,12 @@ foreach ($item in $workingSet) {
 
                 # go back one folder
                 $filePath = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($filePath, "..\"))
-            } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }))
+            } until ([System.Linq.Enumerable]::Count($filePath, [Func[Char, Boolean]] { param($x) $x -eq '\' }) -eq 1)
 
-            if ($configFile -eq $null)
+            if ($settings -eq $null) {
                 Write-Host "No settings file found for LocateProjects reported error"
-
+            }
+            
             # Process each error
             if ([int]$data[0] -eq 1) {
                 New-Result $data[1] "" 1 "ERROR: Project missing. A project (and optionally a solution file) must be in this directory or one of the parent directories to validate and build this code." $settings
