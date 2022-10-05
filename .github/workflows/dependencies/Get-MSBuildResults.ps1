@@ -74,11 +74,7 @@ Param(
 
 $Global:statusOutput = @()
 
-<<<<<<< HEAD
-Write-Host "Gathering solutions and projects... (v1.8b)"
-=======
 Write-Host "Gathering solutions and projects... (v1.8c)"
->>>>>>> c17bad3774e789f5496a4694ee4a0d704460b4f4
 
 if ($PullRequest -ne 0) {
     Write-Host "Running `"LocateProjects `"$RepoRootDir`" --pullrequest $PullRequest --owner $RepoOwner --repo $RepoName`""
