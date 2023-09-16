@@ -58,7 +58,7 @@ issues:
       pass:
         - variable-set:
           name: issue_creator
-          value: "jmes:trim(Issue.user.login)"
+          value: "jmes:Issue.user.login"
         
         - check:
             - type: variable
