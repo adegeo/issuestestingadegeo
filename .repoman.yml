@@ -391,6 +391,13 @@ issue_comment:
       pass:
         - labels-add: ["changes-addressed"]
 
+    - check:
+        - type: query
+          value: "Issue.state == 'open' && Issue.user.id == Comment.user.id"
+        - type: comment-body
+          value: ^#close-me$
+      pass:
+        - close
 
 predefined:
 
