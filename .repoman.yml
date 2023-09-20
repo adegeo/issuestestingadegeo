@@ -369,8 +369,6 @@ pull_request:
               run:
                 - labels-add: ["dotnet-visualbasic/prod", "vb-diagnostics/tech"]
 
-      fail:
-
   labeled:
 
     # Add to .NET 6 project if .NET 6 label added
