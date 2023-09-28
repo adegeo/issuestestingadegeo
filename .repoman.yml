@@ -56,6 +56,9 @@ issues:
         - type: metadata-exists
   
       pass:
+
+        - prod_tech_labels: true
+      
         - variable-set:
           name: issue_creator
           value: "jmes:Issue.user.login"
