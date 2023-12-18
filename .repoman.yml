@@ -56,9 +56,7 @@ issues:
         - type: metadata-exists
   
       pass:
-
         - prod_tech_labels: true
-      
         - variable-set:
           name: issue_creator
           value: "jmes:Issue.user.login"
@@ -70,6 +68,14 @@ issues:
         
           pass:
             - comment-add: "Andy, why are you opening so many issues? Nice id $issue_creator$!"
+
+    # Try to detect an empty issue
+    - check:
+        - type: comment-body
+          value: "### Description\n\n\n\n[Enter feedback here]\n\n\n###"
+      pass:
+        - labels-add: ["needs-more-info"]
+        - close
 
   reopened:
 
