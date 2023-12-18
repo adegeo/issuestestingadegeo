@@ -72,7 +72,7 @@ issues:
     # Try to detect an empty issue
     - check:
         - type: comment-body
-          value: "### Description\n\n\n\n[Enter feedback here]\n\n\n###"
+          value: "### Description\\n+\\[Enter feedback here\\]\\n+###"
       pass:
         - labels-add: ["needs-more-info"]
         - close
