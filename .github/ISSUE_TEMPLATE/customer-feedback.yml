@@ -1,0 +1,69 @@
+name: Learn feedback control.
+description: |
+  ⛔ This template is hooked into the feedback control on the bottom of every page on the live site. It automatically fills in several fields for you. Don't use for other purposes. ⛔
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ```
+        ┌───────────┐
+        │ IMPORTANT ├──────────────────────────┐
+        └────────┬──┘ Please read the          │
+                 │       following statement   │
+                 └─────────────────────────────┘
+        ```
+
+        If you're reporting a general usage question (ex: how do I set the text of a button?), it's better to use Q&A forum like:
+        
+        - [Stack Overflow](https://stackoverflow.com/)
+        - [Microsoft Q&A](https://docs.microsoft.com/answers/products/)
+        
+        If your question is related to documentation, please fill out the following information. Select the issue type, and describe the issue in the text box below. Add as much detail as needed to help us resolve the issue.
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of issue
+      options:
+        - Typo
+        - Code doesn't work
+        - Missing information
+        - Outdated article
+        - Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    validations:
+      required: true
+    attributes:
+      label: Description
+  - type: markdown
+    attributes:
+      value: "## 🚧 Article information 🚧"
+  - type: markdown
+    attributes:
+      value: "*Don't modify the following fields*. They are automatically filled in for you. Doing so will disconnect your issue from the affected article. *Don't edit them*."
+  - type: input
+    id: pageUrl
+    validations:
+      required: true
+    attributes:
+      label: Page URL
+  - type: input
+    id: contentSourceUrl
+    validations:
+      required: true
+    attributes:
+      label: Content source URL
+  - type: input
+    id: documentVersionIndependentId
+    validations:
+      required: true
+    attributes:
+      label: Document Version Independent Id
+  - type: input
+    id: author
+    validations:
+      required: true
+    attributes:
+      label: Article author
